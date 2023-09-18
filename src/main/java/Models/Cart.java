@@ -10,7 +10,7 @@ package Models;
  * @author Kiet
  */
 public class Cart {
-
+   private int CartID;
    private int ProductID;
    private int AccountID;
    private String P_Name;
@@ -20,12 +20,21 @@ public class Cart {
     public Cart() {
     }
 
-    public Cart(int ProductID, int AccountID, String P_Name, int P_Amount, int P_Price) {
+    public Cart(int CartID, int ProductID, int AccountID, String P_Name, int P_Amount, int P_Price) {
+        this.CartID = CartID;
         this.ProductID = ProductID;
         this.AccountID = AccountID;
         this.P_Name = P_Name;
         this.P_Amount = P_Amount;
         this.P_Price = P_Price;
+    }
+
+    public int getCartID() {
+        return CartID;
+    }
+
+    public void setCartID(int CartID) {
+        this.CartID = CartID;
     }
 
     public int getProductID() {
